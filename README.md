@@ -1,28 +1,19 @@
-# Graph Neural Controlled Differential Equations for Traffic Forecasting
+# BIND: Binding Intertemporal Nodes for Multivariate Timeseries Forecasting
 
-[![Arxiv link](https://img.shields.io/static/v1?label=arXiv&message=STG-NCDE&color=red&logo=arxiv)](https://arxiv.org/abs/2112.03558)
 
-[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/graph-neural-controlled-differential/traffic-prediction-on-pemsd7-l)](https://paperswithcode.com/sota/traffic-prediction-on-pemsd7-l?p=graph-neural-controlled-differential)
-[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/graph-neural-controlled-differential/traffic-prediction-on-pemsd7-m)](https://paperswithcode.com/sota/traffic-prediction-on-pemsd7-m?p=graph-neural-controlled-differential)
-[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/graph-neural-controlled-differential/traffic-prediction-on-pemsd3)](https://paperswithcode.com/sota/traffic-prediction-on-pemsd3?p=graph-neural-controlled-differential) [![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/graph-neural-controlled-differential/traffic-prediction-on-pemsd7)](https://paperswithcode.com/sota/traffic-prediction-on-pemsd7?p=graph-neural-controlled-differential) [![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/graph-neural-controlled-differential/traffic-prediction-on-pemsd4)](https://paperswithcode.com/sota/traffic-prediction-on-pemsd4?p=graph-neural-controlled-differential) [![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/graph-neural-controlled-differential/traffic-prediction-on-pemsd8)](https://paperswithcode.com/sota/traffic-prediction-on-pemsd8?p=graph-neural-controlled-differential)
 
 ## Introduction
 
-This is the repository of our accepted AAAI 2022 paper "Graph Neural Controlled Differential Equations for Traffic Forecasting". Paper is available on [arxiv](https://arxiv.org/abs/2112.03558).
+This is the repository of our accepted AAAI 2022 paper "BIND: Binding Intertemporal Nodes for Multivariate Timeseries Forecasting". Paper is available on [arxiv](https://arxiv.org/abs/).
 
 ## Citation
 If you find this code useful, you may cite us as:
 
 ```
-@inproceedings{choi2022STGNCDE,
-  title={Graph Neural Controlled Differential Equations for Traffic Forecasting},
-  author={Jeongwhan Choi AND Hwangyong Choi AND Jeehyun Hwang AND Noseong Park},
-  booktitle={AAAI},
-  year={2022}
-}
+
 ```
 
-## Setup Python environment for STG-NCDE
+## Setup Python environment for BIND
 Install python environment
 ```{bash}
 $ conda env create -f environment.yml 
@@ -41,5 +32,5 @@ $ bash run.sh
 ```{bash}
 $ cd model
 
-$ python Run_cde.py --dataset='PEMSD4' --model='GCDE' --model_type='type1' --embed_dim=10 --hid_dim=64 --hid_hid_dim=64 --num_layers=2 --lr_init=0.001 --weight_decay=1e-3 --epochs=200 --tensorboard --comment="" --device=0
+$ python Run.py --dataset='PEMSD8' 
 ```
