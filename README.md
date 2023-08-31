@@ -1,6 +1,45 @@
-# BIND-main
+# Graph Neural Controlled Differential Equations for Traffic Forecasting
 
----
+[![Arxiv link](https://img.shields.io/static/v1?label=arXiv&message=STG-NCDE&color=red&logo=arxiv)](https://arxiv.org/abs/2112.03558)
 
-- Here I design a multivariate timeserise forecasting method modeling __intertemporal spatial correlations__.
-- The multivariate time series forecasting task can be expressed as a process of inferring the future state of multi-variable based on multivariate historical data through spatiotemporal data fusion. The spatial dimension of spatiotemporal data represents variables in a multivariate time series. Multivariate time series forecasting tasks have important practical significance for assisting decision-making, avoiding risks, and improving returns. Although there are many studies on forecasting tasks based on multivariate time series data, most of the existing studies adopt the perspective of separating the time dimension and the space dimension, that is, adopting a relatively independent time-dependent and space-dependent learning model. In this light, we propose intertemporal spatial correlation, a novel concept that characterizes the complicated functional ties between different points at different times, to incorporate spatial and temporal semantics simultaneously for multi-variate timeseries forecasting, which is incorporated in to BIND (Binding Intertemporal NoDes), a novel framework that features leveraging a Spatial Temporal Attention (S-T Atten) module and a Kronecker product-based Kronecker and Attention Graph Generator (K&AGG) module to generate both conditional and unconditional time-aware adjacency matrices for learning timely yet stable intertemporal spatial correlations. Experiments on 4 benchmark datasets demonstrate the significant improvements of BIND over the SOTAs. Extra studies illustrate the distinct functions of K&AGG and S-T Atten modules and their synergistic effect, and visualize that BIND indeed can find the intertemporal correlations between spatial points with phase differences and is more robust to coarse time granularity compared with competitors.
+[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/graph-neural-controlled-differential/traffic-prediction-on-pemsd7-l)](https://paperswithcode.com/sota/traffic-prediction-on-pemsd7-l?p=graph-neural-controlled-differential)
+[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/graph-neural-controlled-differential/traffic-prediction-on-pemsd7-m)](https://paperswithcode.com/sota/traffic-prediction-on-pemsd7-m?p=graph-neural-controlled-differential)
+[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/graph-neural-controlled-differential/traffic-prediction-on-pemsd3)](https://paperswithcode.com/sota/traffic-prediction-on-pemsd3?p=graph-neural-controlled-differential) [![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/graph-neural-controlled-differential/traffic-prediction-on-pemsd7)](https://paperswithcode.com/sota/traffic-prediction-on-pemsd7?p=graph-neural-controlled-differential) [![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/graph-neural-controlled-differential/traffic-prediction-on-pemsd4)](https://paperswithcode.com/sota/traffic-prediction-on-pemsd4?p=graph-neural-controlled-differential) [![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/graph-neural-controlled-differential/traffic-prediction-on-pemsd8)](https://paperswithcode.com/sota/traffic-prediction-on-pemsd8?p=graph-neural-controlled-differential)
+
+## Introduction
+
+This is the repository of our accepted AAAI 2022 paper "Graph Neural Controlled Differential Equations for Traffic Forecasting". Paper is available on [arxiv](https://arxiv.org/abs/2112.03558).
+
+## Citation
+If you find this code useful, you may cite us as:
+
+```
+@inproceedings{choi2022STGNCDE,
+  title={Graph Neural Controlled Differential Equations for Traffic Forecasting},
+  author={Jeongwhan Choi AND Hwangyong Choi AND Jeehyun Hwang AND Noseong Park},
+  booktitle={AAAI},
+  year={2022}
+}
+```
+
+## Setup Python environment for STG-NCDE
+Install python environment
+```{bash}
+$ conda env create -f environment.yml 
+```
+
+
+## Reproducibility
+### Usage
+#### In terminal
+- Run the shell file (at the root of the project)
+
+```{bash}
+$ bash run.sh
+```
+- Run the python file (at the `model` folder)
+```{bash}
+$ cd model
+
+$ python Run_cde.py --dataset='PEMSD4' --model='GCDE' --model_type='type1' --embed_dim=10 --hid_dim=64 --hid_hid_dim=64 --num_layers=2 --lr_init=0.001 --weight_decay=1e-3 --epochs=200 --tensorboard --comment="" --device=0
+```
