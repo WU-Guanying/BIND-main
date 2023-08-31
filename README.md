@@ -4,7 +4,7 @@
 
 ## Introduction
 
-This is the repository of our accepted AAAI 2022 paper "BIND: Binding Intertemporal Nodes for Multivariate Timeseries Forecasting". Paper is available on [arxiv](https://arxiv.org/abs/).
+The repository is for paper "BIND: Binding Intertemporal Nodes for Multivariate Timeseries Forecasting". Paper is available on [arxiv](https://arxiv.org/abs/).
 
 ## Citation
 If you find this code useful, you may cite us as:
