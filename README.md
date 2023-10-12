@@ -20,7 +20,7 @@ If you find this code useful, you may cite us as:
 
 ```
 
-## Setup Python environment for BIND :maple_leaf:
+## Setup Python Environment for BIND :maple_leaf:
 Install python environment
 ```{bash}
 $ conda env create -f environment.yml 
