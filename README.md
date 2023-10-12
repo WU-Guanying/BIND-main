@@ -2,7 +2,7 @@
 
 
 
-## Introduction
+## Introduction :seedling:	
 
 The repository is for paper "BIND: Binding Intertemporal Nodes for Multivariate Timeseries Forecasting". 
 
